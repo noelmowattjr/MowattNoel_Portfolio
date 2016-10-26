@@ -26,11 +26,27 @@ namespace MowattNoel_Avengers
             string ironMan = "Iron Man"; int pulsorAttack = 9; int flingAttack = 8; int blastAttack = 10;
             string thor = "Thor"; int hammerAttack = 12; int punchAttack = 5; int kickAttack = 7;
 
+            //--AvengersArray
+            string [] AvengersRoster = new[] { captainAmerica, ironMan, thor };
+
             //--User's hero
             string hero = Console.ReadLine();
 
-            //--test user's choice
-            Console.WriteLine("You chose "+hero );
+            //--Let's iterate through avengers array
+            foreach (string h in AvengersRoster)
+            {
+                //--Validate that user has in fact chosen a hero from the options given
+                if (hero != h)
+                {
+                    Console.WriteLine("Please choose 1 of 3 heroes and press enter: Captain America, Iron Man, or Thor");
+                }
+
+                Console.WriteLine("Hero "+h);
+            }
+            
+
+                //--test user's choice
+                Console.WriteLine("You chose "+hero );
         }
     }
 }
