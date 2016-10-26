@@ -38,15 +38,15 @@ namespace MowattNoel_Avengers
                 //--Validate that user has in fact chosen a hero from the options given
                 if (hero != h)
                 {
-                    Console.WriteLine("Please choose 1 of 3 heroes and press enter: Captain America, Iron Man, or Thor");
+                    Console.WriteLine("You chose "+hero+" but you must choose from the options presented!\r\nWhich Hero would you like to save earth: Captain Amrica, Iron Man, or Thor?");
                 }
 
-                Console.WriteLine("Hero "+h);
+                //Console.WriteLine("Hero "+h);
             }
             
 
                 //--test user's choice
-                Console.WriteLine("You chose "+hero );
+                //Console.WriteLine("You chose "+hero );
         }
     }
 }
