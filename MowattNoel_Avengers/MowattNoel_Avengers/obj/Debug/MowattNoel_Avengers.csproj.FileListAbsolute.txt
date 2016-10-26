@@ -1,1 +1,6 @@
 \\vmware-host\Shared Folders\MowattNoel_Portfolio\MowattNoel_Avengers\MowattNoel_Avengers\bin\Debug\MowattNoel_Avengers.exe.config
+\\vmware-host\Shared Folders\MowattNoel_Portfolio\MowattNoel_Avengers\MowattNoel_Avengers\bin\Debug\MowattNoel_Avengers.exe
+\\vmware-host\Shared Folders\MowattNoel_Portfolio\MowattNoel_Avengers\MowattNoel_Avengers\bin\Debug\MowattNoel_Avengers.pdb
+\\vmware-host\Shared Folders\MowattNoel_Portfolio\MowattNoel_Avengers\MowattNoel_Avengers\obj\Debug\MowattNoel_Avengers.csprojResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\MowattNoel_Portfolio\MowattNoel_Avengers\MowattNoel_Avengers\obj\Debug\MowattNoel_Avengers.exe
+\\vmware-host\Shared Folders\MowattNoel_Portfolio\MowattNoel_Avengers\MowattNoel_Avengers\obj\Debug\MowattNoel_Avengers.pdb
