@@ -18,11 +18,19 @@ namespace MowattNoel_Avengers
             //--Inform user what's happening
             Console.WriteLine("The earth is under attack by Thanos and it is up to you to save it!\r\nYou may choose between 1 of 3 heroes: Captain America, Iron Man, Thor ..then press enter");
 
+            //--The Villain
+            string thanos = "Thanos"; int thanosLifePoints = 100;
+
+            //--The heroes
+            string captainAmerica = "Captain America"; int shieldAttack = 11; int throwAttack = 9;
+            string ironMan = "Iron Man"; int pulsorAttack = 9; int flingAttack = 8; int blastAttack = 10;
+            string thor = "Thor"; int hammerAttack = 12; int punchAttack = 5; int kickAttack = 7;
+
             //--User's hero
             string hero = Console.ReadLine();
 
             //--test user's choice
-            Console.WriteLine("You chose "+hero);
+            Console.WriteLine("You chose "+hero );
         }
     }
 }
