@@ -33,17 +33,13 @@ namespace MowattNoel_Avengers
             string hero = Console.ReadLine();
 
             //--Validating
-            while (hero != AvengersRoster[0] || hero != AvengersRoster[1] || hero != AvengersRoster[2])
+            while (hero != AvengersRoster[0] && hero != AvengersRoster[1] && hero != AvengersRoster[2])
             {
-                Console.WriteLine("You chose " + hero + " but you must choose from the options presented!\r\nWhich Hero would you like to save earth: Captain Amrica, Iron Man, or Thor?");
-                string heroAgain = Console.ReadLine();
+                Console.WriteLine("Nope try again!");
+                hero = Console.ReadLine();
             }
-            
-              
-            
 
-                //--test user's choice
-                //Console.WriteLine("You chose "+hero );
+            
         }
     }
 }
