@@ -26,7 +26,7 @@ namespace MowattNoel_Avengers
             string captainAmerica = "Captain America";
             string ironMan = "Iron Man";
             string thor = "Thor";
-            double attack;
+            double attack = 20;
 
             //--AvengersArray
             string [] AvengersRoster = new[] { captainAmerica, ironMan, thor };
@@ -55,14 +55,18 @@ namespace MowattNoel_Avengers
             string attackString = Console.ReadLine();
 
             //--Validate that user has in fact entered 'Attack'
+            //--This piece of psudo code is from a past pj in SDI (!(double.TryParse(poundsStr, out poundsDouble)))
             while (attackString != "Attack" && attackString != "attack")
             {
                 Console.WriteLine("Please type the word 'Attack' and press enter!");
                 attackString = Console.ReadLine();
             }
 
-            //--test
-            Console.WriteLine("You entered "+attackString);
+            if (attackString == "Attack" || attackString == "attack")
+            {
+                double thanosLifeRemainder = thanosLifePoints - attack;
+                Console.WriteLine("Thanos's life remainder "+thanosLifeRemainder);
+            }
         }
     }
 }
