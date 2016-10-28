@@ -16,7 +16,7 @@ namespace MowattNoel_Avengers
              *  -Thor */
 
             //--Inform user what's happening
-            Console.WriteLine("The earth is under attack by Thanos and it is up to you to save it!\r\nYou may choose between 1 of 3 heroes: Captain America, Iron Man, Thor ..then press enter");
+            Console.WriteLine("\r\nThe earth is under attack by Thanos and it is up to you to save it!\r\nYou may choose between 1 of 3 heroes: Captain America, Iron Man, Thor ..then press enter");
 
             //--The Villain
             string thanos = "Thanos"; int thanosLifePoints = 100;
@@ -32,12 +32,17 @@ namespace MowattNoel_Avengers
             //--User's hero
             string hero = Console.ReadLine();
 
-            //--Validating
+            //--Validation--//
+            //--User must only choose between Cap. America, Iron Man, or Thor - NO Exception
             while (hero != AvengersRoster[0] && hero != AvengersRoster[1] && hero != AvengersRoster[2])
             {
-                Console.WriteLine("Nope try again!");
+                Console.WriteLine("Please choose one of the listed heroes to fight Thanos and press enter!\r\nCaptain America, Iron Man, or Thor");
                 hero = Console.ReadLine();
             }
+
+            //--Confirmation to user of his/her choice of hero
+            Console.WriteLine("You chose, "+hero+" to fight the villainous "+thanos+"!\r\nNow let's go stop him and save our world.");
+
 
             
         }
