@@ -10,7 +10,8 @@ namespace MowattNoel_Avengers
     {
         static void Main(string[] args)
         {
-            /*  Pick 1 of 3 Avengers to fight Thanos  
+            /*  Pick 1 of 3 Avengers to fight Thanos and you will only have 5 turns to defeat Thanos
+             *  Heroes to choose from below 
              *  -Captain America
              *  -Iron Man
              *  -Thor */
@@ -19,12 +20,13 @@ namespace MowattNoel_Avengers
             Console.WriteLine("\r\nThe earth is under attack by Thanos and it is up to you to save it!\r\nYou may choose between 1 of 3 heroes: Captain America, Iron Man, Thor ..then press enter");
 
             //--The Villain
-            string thanos = "Thanos"; int thanosLifePoints = 100;
+            string thanos = "Thanos"; double thanosLifePoints = 100; double thanosAttack = 20;
 
-            //--The heroes
-            string captainAmerica = "Captain America"; int shieldAttack = 11; int throwAttack = 9;
-            string ironMan = "Iron Man"; int pulsorAttack = 9; int flingAttack = 8; int blastAttack = 10;
-            string thor = "Thor"; int hammerAttack = 12; int punchAttack = 5; int kickAttack = 7;
+            //--The heroes & Attack
+            string captainAmerica = "Captain America";
+            string ironMan = "Iron Man";
+            string thor = "Thor";
+            double attack;
 
             //--AvengersArray
             string [] AvengersRoster = new[] { captainAmerica, ironMan, thor };
@@ -44,7 +46,23 @@ namespace MowattNoel_Avengers
             Console.WriteLine("You chose, "+hero+" to fight the villainous "+thanos+"!\r\nNow let's go stop him and save our world.");
 
 
-            
+            //----------------//
+
+            //--Prompt user to attack Thanos
+            Console.WriteLine("To defeat Thanos, type 'Attack'and press enter");
+
+            //--catch user's response
+            string attackString = Console.ReadLine();
+
+            //--Validate that user has in fact entered 'Attack'
+            while (attackString != "Attack" && attackString != "attack")
+            {
+                Console.WriteLine("Please type the word 'Attack' and press enter!");
+                attackString = Console.ReadLine();
+            }
+
+            //--test
+            Console.WriteLine("You entered "+attackString);
         }
     }
 }
