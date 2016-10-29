@@ -87,7 +87,41 @@ namespace MowattNoel_Avengers
                 Console.WriteLine(hero + " Attack Thanos again.");
                 attackString = Console.ReadLine();
             }
-
+            //--Turn 3
+            if (attackString == "Attack" || attackString == "attack")
+            {
+                if (thanosLifePoints != 0)
+                {
+                    thanosLifePoints -= ranNum.Next(15, 25);
+                    Console.WriteLine(hero + " has attacked Thanos...Thanos now has " + thanosLifePoints + " life points remainding.");
+                }
+                Console.WriteLine(hero + " Attack Thanos again.");
+                attackString = Console.ReadLine();
+            }
+            //--Turn 4
+            if (attackString == "Attack" || attackString == "attack")
+            {
+                if (thanosLifePoints != 0)
+                {
+                    thanosLifePoints -= ranNum.Next(13, 21);
+                    Console.WriteLine(hero + " has attacked Thanos...Thanos now has " + thanosLifePoints + " life points remainding.");
+                }
+                Console.WriteLine(hero + " Attack Thanos again.");
+                attackString = Console.ReadLine();
+            }
+            //--Turn 5
+            if (attackString == "Attack" || attackString == "attack")
+            {
+                if (thanosLifePoints != 0)
+                {
+                    thanosLifePoints -= ranNum.Next(13, 21);
+                    Console.WriteLine("SORRY "+hero+"! You failed to defeat Thanos...he still has " + thanosLifePoints + " life points remainding.");
+                }
+                else
+                {
+                    Console.WriteLine("Congratulations "+hero+"! You have defeated "+thanos);
+                }
+            }
 
         }
 
