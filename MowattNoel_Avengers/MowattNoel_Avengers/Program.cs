@@ -65,20 +65,25 @@ namespace MowattNoel_Avengers
             //--Will generate a random number depending on the 2 parameters I will pass
             Random ranNum = new Random();
 
-            if (attackString == "Attack" || attackString == "attack")
+            for (int i = 0; i < 5; i++)
             {
-                //--Will store Thano's life remainder
-                double thanosLifeRemainder = 0;
-
-                //--While loop
-                while (thanosLifePoints >= 100)
+                if (attackString == "Attack" || attackString == "attack")
                 {
-                    thanosLifeRemainder = thanosLifePoints - ranNum.Next(15, 20);
-                    thanosLifePoints--;
+                    //--Will store Thano's life remainder
+                    double thanosLifeRemainder = 0;
+
+                    //--While loop
+                    while (thanosLifePoints >= 100)
+                    {
+                        thanosLifeRemainder = thanosLifePoints - ranNum.Next(15, 20);
+                        thanosLifePoints--;
+                    }
+                    //double thanosLifeRemainder = thanosLifePoints - ranNum.Next(1, 25);
+                    Console.WriteLine("Thanos's life remainder " + thanosLifeRemainder);
                 }
-                //double thanosLifeRemainder = thanosLifePoints - ranNum.Next(1, 25);
-                Console.WriteLine("Thanos's life remainder "+thanosLifeRemainder);
             }
+
+            
         }
     }
 }
