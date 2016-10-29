@@ -61,7 +61,7 @@ namespace MowattNoel_Avengers
                 Console.WriteLine("Please type the word 'Attack' and press enter!");
                 attackString = Console.ReadLine();
             }
-
+             
                 //--Will generate a random number depending on the 2 parameters I will pass
                 Random ranNum = new Random();
 
