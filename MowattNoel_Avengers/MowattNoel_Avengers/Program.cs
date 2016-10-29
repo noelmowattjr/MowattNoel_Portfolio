@@ -26,7 +26,7 @@ namespace MowattNoel_Avengers
             string captainAmerica = "Captain America";
             string ironMan = "Iron Man";
             string thor = "Thor";
-            double attack = 20;
+            //--double attack = 20;
 
             //--AvengersArray
             string [] AvengersRoster = new[] { captainAmerica, ironMan, thor };
@@ -43,7 +43,7 @@ namespace MowattNoel_Avengers
             }
 
             //--Confirmation to user of his/her choice of hero
-            Console.WriteLine("You chose, "+hero+" to fight the villainous "+thanos+"!\r\nNow let's go stop him and save our world.");
+            Console.WriteLine("You have chosen "+hero+" to fight the villainous "+thanos+"! Now let's go stop him and save our world.");
 
 
             //----------------//
@@ -65,25 +65,32 @@ namespace MowattNoel_Avengers
             //--Will generate a random number depending on the 2 parameters I will pass
             Random ranNum = new Random();
 
-            for (int i = 0; i < 5; i++)
+            //--Turn 1
+            if (attackString == "Attack" || attackString == "attack")
             {
-                if (attackString == "Attack" || attackString == "attack")
+                if (thanosLifePoints == 100)
                 {
-                    //--Will store Thano's life remainder
-                    double thanosLifeRemainder = 0;
-
-                    //--While loop
-                    while (thanosLifePoints >= 100)
-                    {
-                        thanosLifeRemainder = thanosLifePoints - ranNum.Next(15, 20);
-                        thanosLifePoints--;
-                    }
-                    //double thanosLifeRemainder = thanosLifePoints - ranNum.Next(1, 25);
-                    Console.WriteLine("Thanos's life remainder " + thanosLifeRemainder);
+                    thanosLifePoints -= ranNum.Next(13, 21);
+                    Console.WriteLine(hero+" has attacked Thanos...Thanos now has " + thanosLifePoints + " life points remainding.");
                 }
+                Console.WriteLine(hero+" Attack Thanos again.");
+                attackString = Console.ReadLine();
+            }
+            //--Turn 2
+            if (attackString == "Attack" || attackString == "attack")
+            {
+                if (thanosLifePoints != 0)
+                {
+                    thanosLifePoints -= ranNum.Next(13, 21);
+                    Console.WriteLine(hero + " has attacked Thanos...Thanos now has " + thanosLifePoints + " life points remainding.");
+                }
+                Console.WriteLine(hero + " Attack Thanos again.");
+                attackString = Console.ReadLine();
             }
 
-            
+
         }
+
+       
     }
 }
