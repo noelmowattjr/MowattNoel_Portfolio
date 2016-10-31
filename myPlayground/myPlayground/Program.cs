@@ -33,7 +33,7 @@ namespace myPlayground
                 int b = Convert.ToInt32(Console.ReadLine());
 
                 int sum = a + b;
-                Console.WriteLine("The sum is: "+sum);
+                Console.WriteLine("The sum of {0} + {1} equals to {2}", a, b, sum);
 
             } while (false);
         }
