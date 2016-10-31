@@ -19,6 +19,23 @@ namespace myPlayground
             {
                 Console.WriteLine(y);
             }
+
+            /*  Basic Calculator using Do While Loop
+             
+             */
+            
+            do
+            {
+                Console.Write("a = ");
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("b = ");
+                int b = Convert.ToInt32(Console.ReadLine());
+
+                int sum = a + b;
+                Console.WriteLine("The sum is: "+sum);
+
+            } while (true);
         }
     }
 }
