@@ -35,7 +35,7 @@ namespace myPlayground
                 int sum = a + b;
                 Console.WriteLine("The sum is: "+sum);
 
-            } while (true);
+            } while (false);
         }
     }
 }
