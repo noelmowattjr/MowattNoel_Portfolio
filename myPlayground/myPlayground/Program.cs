@@ -23,7 +23,7 @@ namespace myPlayground
             /*  Basic Calculator using Do While Loop
              
              */
-            
+            /*
             do
             {
                 Console.Write("a = ");
@@ -50,6 +50,23 @@ namespace myPlayground
                 Console.WriteLine("You entered {0} for your width and {1} for your height, thus giving us an area of {2} for your trianlge!", width, height, area);
 
             } while (false);
+            */
+
+            //--Break statement
+            do
+            {
+                Console.WriteLine("How old are you?");
+                string age = Console.ReadLine();
+
+                if (age == "exit")
+                {
+                    break;
+                    Console.WriteLine("You are {0} years old", age);
+                }
+            } while (false);
+             
+            
+
         }
     }
 }
