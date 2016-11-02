@@ -44,7 +44,7 @@ namespace myPlayground
                 int width = Convert.ToInt32(Console.ReadLine());
 
                 Console.Write("Enter triangle's height: ");
-                int height = Convert.ToInt32(Console.ReadLine());
+                int  height = Convert.ToInt32(Console.ReadLine());
 
                 int area = (width * height) / 2;
                 Console.WriteLine("You entered {0} for your width and {1} for your height, thus giving us an area of {2} for your trianlge!", width, height, area);

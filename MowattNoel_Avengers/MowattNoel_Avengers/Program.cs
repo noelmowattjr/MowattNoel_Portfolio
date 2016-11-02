@@ -10,6 +10,11 @@ namespace MowattNoel_Avengers
     {
         static void Main(string[] args)
         {
+            /*  Noel Mowatt
+                October 30, 2016
+                Instructor: Edward
+                Class: Project & Portfolio I*/
+
             /*  Pick 1 of 3 Avengers to fight Thanos and you will only have 5 turns to defeat Thanos
              *  Heroes to choose from below 
              *  -Captain America
@@ -61,7 +66,7 @@ namespace MowattNoel_Avengers
                 Console.WriteLine("Please type the word 'Attack' and press enter!");
                 attackString = Console.ReadLine();
             }
-             
+              
                 //--Will generate a random number depending on the 2 parameters I will pass
                 Random ranNum = new Random();
 
