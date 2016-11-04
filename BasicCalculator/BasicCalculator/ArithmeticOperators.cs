@@ -21,4 +21,17 @@ namespace BasicCalculator
         public string GetDivision() { return this.division; }
 
     }
+
+    class EqualOperator
+    {
+        //--Equal object
+        private string equal = "equal";
+
+        public string GetEqual()
+        {
+            return this.equal;
+        }
+    }
+
+    
 }
