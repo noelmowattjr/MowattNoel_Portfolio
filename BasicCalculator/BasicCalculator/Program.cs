@@ -16,17 +16,16 @@ namespace BasicCalculator
                 Class: Project & Portfolio I*/
 
             /*  This will be a baic functioning calculator that will be strictly console based */
-
-            //string add;
-
-            //--Created an instance of a class
+            
+            //--Creating my class
            ArithmeticOperators arithmeticOPS = new ArithmeticOperators();
 
-            //--Instantiating my plus variable
-            char plus = arithmeticOPS.GetPlus();
+            //--Instantiating my arithmetic operators
+            int add = arithmeticOPS.GetPlus();
+            int subtract = arithmeticOPS.GetMinus();
+            int times = arithmeticOPS.GetMultiply();
+            int divide = arithmeticOPS.GetDivide();
             
-            //--Testing to see if I actually got a plus symbol to print to consol
-            Console.WriteLine("This is the add operator: {0}", plus);
         
         }
 

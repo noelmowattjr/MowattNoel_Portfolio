@@ -9,33 +9,33 @@ namespace BasicCalculator
     class ArithmeticOperators
     {
         //--Objects--//
-        private char plus = '+';
-        private char minus = '-';
-        private char multiply = '*';
-        private char divide = '/';
+        private int plus = '+';
+        private int minus = '-';
+        private int multiply = '*';
+        private int division = '/';
 
         //--Gets my plus variable
-         public char GetPlus()
+         public int GetPlus()
         {
             return this.plus;
         }
 
         //--Gets my minus variable
-        public char GetMinus()
+        public int GetMinus()
         {
             return this.minus
         }
 
         //--Get my multiply var
-        public char GetMultiply()
+        public int GetMultiply()
         {
             return this.multiply;
         }
 
         //--Get my divide var
-        public char GetDivide()
+        public int GetDivide()
         {
-            return this.divide;
+            return this.division;
         }
 
 
