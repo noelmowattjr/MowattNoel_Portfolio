@@ -9,36 +9,16 @@ namespace BasicCalculator
     class ArithmeticOperators
     {
         //--Objects--//
-        private int plus = '+';
-        private int minus = '-';
-        private int multiply = '*';
-        private int division = '/';
-
-        //--Gets my plus variable
-         public int GetPlus()
-        {
-            return this.plus;
-        }
-
-        //--Gets my minus variable
-        public int GetMinus()
-        {
-            return this.minus
-        }
-
-        //--Get my multiply var
-        public int GetMultiply()
-        {
-            return this.multiply;
-        }
-
-        //--Get my divide var
-        public int GetDivide()
-        {
-            return this.division;
-        }
-
-
+        private string addition = "add";
+        private string substraction = "subtract";
+        private string multiplication = "multiply";
+        private string division = "divide";
+        
+        //--Make objects accessible to Program class
+        public string GetAddition(){ return this.addition; }
+        public string GetSubtraction() { return this.substraction; }
+        public string GetMultiplication() { return this.multiplication; }
+        public string GetDivision() { return this.division; }
 
     }
 }

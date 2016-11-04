@@ -12,21 +12,20 @@ namespace BasicCalculator
         {
             /*  Noel Mowatt
                 November 2, 2016
-                Instructor: Edward
-                Class: Project & Portfolio I*/
+                Class: DVP1*/
 
             /*  This will be a baic functioning calculator that will be strictly console based */
-            
-            //--Creating my class
-           ArithmeticOperators arithmeticOPS = new ArithmeticOperators();
 
-            //--Instantiating my arithmetic operators
-            int add = arithmeticOPS.GetPlus();
-            int subtract = arithmeticOPS.GetMinus();
-            int times = arithmeticOPS.GetMultiply();
-            int divide = arithmeticOPS.GetDivide();
-            
-        
+            //--Instantiate class
+            ArithmeticOperators OperatorState = new ArithmeticOperators();
+
+            //--Instantiate class properties
+            string Addition = OperatorState.GetAddition();
+            string Subtraction = OperatorState.GetSubtraction();
+            string Multiplication = OperatorState.GetMultiplication();
+            string Division = OperatorState.GetDivision();
+
+
         }
 
        
