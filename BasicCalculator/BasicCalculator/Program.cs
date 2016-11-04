@@ -19,9 +19,14 @@ namespace BasicCalculator
 
             //string add;
 
-            ArithmeticOperators add = new ArithmeticOperators();
+            //--Created an instance of a class
+           ArithmeticOperators arithmeticOPS = new ArithmeticOperators();
 
-            Console.WriteLine("This is the add operator: {0}", add);
+            //--Instantiating my plus variable
+            char plus = arithmeticOPS.GetPlus();
+            
+            //--Testing to see if I actually got a plus symbol to print to consol
+            Console.WriteLine("This is the add operator: {0}", plus);
         
         }
 
