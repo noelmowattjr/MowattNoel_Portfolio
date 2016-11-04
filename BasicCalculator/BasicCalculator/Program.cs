@@ -43,31 +43,50 @@ namespace BasicCalculator
                 yesNO = Console.ReadLine();
             }
 
-            //--Give user a choice of whether to continue with the program or exit
+            //----------YES ---or--- NO----------//
+            //--To enter or exit Calculator program--//
             if (yesNO == "Yes" || yesNO == "YES" || yesNO == "yes")
             {
-                //--User enters first number input
-                Console.WriteLine("Enter number: ");
-                string inputOne = Console.ReadLine();
-
-                //--Arithmetic Operator selection prompt
-                Console.WriteLine("Enter operator: ");
-                string operatorNow = Console.ReadLine();
-
-                //--User's second number input
-                Console.Write("Enter another number");
-                string inputTwo = Console.ReadLine();
-
-                //--Equal
-                Console.WriteLine("Press = key: ...");
-                string equalNow = Console.ReadLine();
-
                 //--Integer variables
                 int input1; int input2;
 
-                //--Convert strings to int types
+                //--MARK I
+
+                //--User enters first number input
+                Console.Write("Press a number and press enter: ");
+                string inputOne = Console.ReadLine();
+
+                //--CONVERTED first user's input
                 input1 = Convert.ToInt32(inputOne);
-                input2 = Convert.ToInt32(inputTwo);
+
+                //--Arithmetic Operator selection prompt
+                Console.Write("Press an operator and press enter: ");
+                string operatorNow = Console.ReadLine();
+
+                //--Addition key pressed--//
+                if (operatorNow == Addition)
+                {
+                    //--New number entered
+                    Console.Write("Press another number and press enter: ");
+                    string inputTwo = Console.ReadLine();
+                    input2 = Convert.ToInt32(inputTwo);
+
+                    //--Equal key pressed
+                    //--Get sum of user's two numbers
+                    Console.Write("Press equal key and press enter: ");
+                    string equalNow = Console.ReadLine();
+                    
+                    if (equalNow == Equal)
+                    {
+                        int sum = input1 + input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, sum);
+                    }
+                }
+                
+                //--MARK II 
+                
+
+                
                 
             } //--Else EXIT the program
             else if (yesNO == "No" || yesNO == "NO" || yesNO == "no")

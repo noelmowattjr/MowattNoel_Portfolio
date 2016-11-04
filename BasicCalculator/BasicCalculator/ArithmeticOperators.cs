@@ -9,10 +9,10 @@ namespace BasicCalculator
     class ArithmeticOperators
     {
         //--Objects--//
-        private string addition = "add";
-        private string substraction = "subtract";
-        private string multiplication = "multiply";
-        private string division = "divide";
+        private string addition = "+";
+        private string substraction = "-";
+        private string multiplication = "*";
+        private string division = "/";
         
         //--Make objects accessible to Program class
         public string GetAddition(){ return this.addition; }
@@ -25,7 +25,7 @@ namespace BasicCalculator
     class EqualOperator
     {
         //--Equal object
-        private string equal = "equal";
+        private string equal = "=";
 
         public string GetEqual()
         {
