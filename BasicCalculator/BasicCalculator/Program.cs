@@ -46,11 +46,21 @@ namespace BasicCalculator
             //--Give user a choice of whether to continue with the program or exit
             if (yesNO == "Yes" || yesNO == "YES" || yesNO == "yes")
             {
-                Console.WriteLine("...");
+                //--User enters first number input
+                Console.WriteLine("Enter number: ");
                 string inputOne = Console.ReadLine();
 
-                Console.Write("...");
+                //--Arithmetic Operator selection prompt
+                Console.WriteLine("Enter operator: ");
+                string operatorNow = Console.ReadLine();
+
+                //--User's second number input
+                Console.Write("Enter another number");
                 string inputTwo = Console.ReadLine();
+
+                //--Equal
+                Console.WriteLine("Press = key: ...");
+                string equalNow = Console.ReadLine();
 
                 //--Integer variables
                 int input1; int input2;
@@ -58,21 +68,10 @@ namespace BasicCalculator
                 //--Convert strings to int types
                 input1 = Convert.ToInt32(inputOne);
                 input2 = Convert.ToInt32(inputTwo);
-
-                //--Check for which operator user has pressed and calculate
-                /*if ()
-                {
-
-                }*/
-            } else if (yesNO == "No" || yesNO == "NO" || yesNO == "no")
-            {
-                return;
-            }
-
-
-
-
-
+                
+            } //--Else EXIT the program
+            else if (yesNO == "No" || yesNO == "NO" || yesNO == "no")
+            {return;}
         }
 
        
