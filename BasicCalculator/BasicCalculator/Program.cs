@@ -26,7 +26,10 @@ namespace BasicCalculator
             string Multiplication = OperatorState.GetMultiplication();
             string Division = OperatorState.GetDivision();
             string Equal = EqualState.GetEqual();
-            
+
+            //--Integer variables
+            int input1; int input2;
+
             //--Ask user for name and store it in variable
             Console.WriteLine("Enter name: ");
             string name = Console.ReadLine();
@@ -38,26 +41,26 @@ namespace BasicCalculator
 
             //--Validate user's input for yes or no
             while (yesNO != "Yes" && yesNO != "YES" && yesNO != "yes" && yesNO == "No" && yesNO == "NO" && yesNO == "no")
-            {
-                Console.WriteLine("Please type Yes or No and press enter.");
-                yesNO = Console.ReadLine();
-            }
+            {Console.WriteLine("Please type Yes or No and press enter."); yesNO = Console.ReadLine();}
 
             //----------YES ---or--- NO----------//
             //--To enter or exit Calculator program--//
             if (yesNO == "Yes" || yesNO == "YES" || yesNO == "yes")
             {
-                //--Integer variables
-                int input1; int input2;
-
-                //--MARK I
-
                 //--User enters first number input
                 Console.Write("Press a number and press enter: ");
                 string inputOne = Console.ReadLine();
 
                 //--CONVERTED first user's input
-                input1 = Convert.ToInt32(inputOne);
+                //input1 = Convert.ToInt32(inputOne);
+
+                //--NUMBER ---- VALIDATION---//
+                while (!(int.TryParse(inputOne, out input1)))
+                {
+                    Console.WriteLine("Please only enter numbers!");
+                    inputOne = Console.ReadLine();
+                }
+                //-------------------------------//
 
                 //--Arithmetic Operator selection prompt
                 Console.Write("Press an operator and press enter: ");
@@ -82,17 +85,62 @@ namespace BasicCalculator
                         Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, sum);
                     }
                 }
-                
-                //--MARK II 
-                
+                else if (operatorNow == Subtraction)
+                {
+                    //--New number entered
+                    Console.Write("Press another number and press enter: ");
+                    string inputTwo = Console.ReadLine();
+                    input2 = Convert.ToInt32(inputTwo);
 
-                
-                
+                    //--Equal key pressed
+                    Console.Write("Press equal key and press enter: ");
+                    string equalNow = Console.ReadLine();
+
+                    if (equalNow == Equal)
+                    {
+                        int difference = input1 - input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, difference);
+                    }
+                }
+                else if (operatorNow == Multiplication)
+                {
+                    //--New number entered
+                    Console.Write("Press another number and press enter: ");
+                    string inputTwo = Console.ReadLine();
+                    input2 = Convert.ToInt32(inputTwo);
+
+                    //--Equal key pressed
+                    //--Get sum of user's two numbers
+                    Console.Write("Press equal key and press enter: ");
+                    string equalNow = Console.ReadLine();
+
+                    if (equalNow == Equal)
+                    {
+                        int product = input1 * input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, product);
+                    }
+                }
+                else if (operatorNow == Division)
+                {
+                    //--New number entered
+                    Console.Write("Press another number and press enter: ");
+                    string inputTwo = Console.ReadLine();
+                    input2 = Convert.ToInt32(inputTwo);
+
+                    //--Equal key pressed
+                    //--Get sum of user's two numbers
+                    Console.Write("Press equal key and press enter: ");
+                    string equalNow = Console.ReadLine();
+
+                    if (equalNow == Equal)
+                    {
+                        int quotient = input1 / input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, quotient);
+                    }
+                }
             } //--Else EXIT the program
             else if (yesNO == "No" || yesNO == "NO" || yesNO == "no")
             {return;}
         }
-
-       
     }
 }

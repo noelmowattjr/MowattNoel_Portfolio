@@ -14,12 +14,13 @@ namespace BasicCalculator
         private string multiplication = "*";
         private string division = "/";
         
+        //----------My Public Constructors----------//
         //--Make objects accessible to Program class
         public string GetAddition(){ return this.addition; }
         public string GetSubtraction() { return this.substraction; }
         public string GetMultiplication() { return this.multiplication; }
         public string GetDivision() { return this.division; }
-
+        
     }
 
     class EqualOperator
@@ -27,6 +28,7 @@ namespace BasicCalculator
         //--Equal object
         private string equal = "=";
 
+        //--Constructor 
         public string GetEqual()
         {
             return this.equal;
@@ -34,4 +36,5 @@ namespace BasicCalculator
     }
 
     
+
 }
