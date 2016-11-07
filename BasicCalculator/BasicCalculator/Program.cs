@@ -28,7 +28,8 @@ namespace BasicCalculator
             string Equal = EqualState.GetEqual();
 
             //--Integer variables
-            int input1; int input2;
+            //int input1; 
+            int input2;
 
             //--Ask user for name and store it in variable
             Console.WriteLine("Enter name: ");
@@ -50,18 +51,11 @@ namespace BasicCalculator
                 //--User enters first number input
                 Console.Write("Press a number and press enter: ");
                 string inputOne = Console.ReadLine();
-
-                //--CONVERTED first user's input
-                //input1 = Convert.ToInt32(inputOne);
-
-                //--NUMBER ---- VALIDATION---//
-                while (!(int.TryParse(inputOne, out input1)))
-                {
-                    Console.WriteLine("Please only enter numbers!");
-                    inputOne = Console.ReadLine();
-                }
-                //-------------------------------//
-
+                
+                //--Validate user number input
+                int input_1 = ValidateNumbersInput(inputOne);
+                
+                
                 //--Arithmetic Operator selection prompt
                 Console.Write("Press an operator and press enter: ");
                 string operatorNow = Console.ReadLine();
@@ -72,7 +66,10 @@ namespace BasicCalculator
                     //--New number entered
                     Console.Write("Press another number and press enter: ");
                     string inputTwo = Console.ReadLine();
-                    input2 = Convert.ToInt32(inputTwo);
+                    //--input2 = Convert.ToInt32(inputTwo);
+
+                    //--Validate user number input
+                    input2 = ValidateNumbersInput(inputTwo);
 
                     //--Equal key pressed
                     //--Get sum of user's two numbers
@@ -81,8 +78,8 @@ namespace BasicCalculator
                     
                     if (equalNow == Equal)
                     {
-                        int sum = input1 + input2;
-                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, sum);
+                        int sum = input_1 + input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input_1, input2, sum);
                     }
                 }
                 else if (operatorNow == Subtraction)
@@ -98,8 +95,8 @@ namespace BasicCalculator
 
                     if (equalNow == Equal)
                     {
-                        int difference = input1 - input2;
-                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, difference);
+                        int difference = input_1 - input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input_1, input2, difference);
                     }
                 }
                 else if (operatorNow == Multiplication)
@@ -116,8 +113,8 @@ namespace BasicCalculator
 
                     if (equalNow == Equal)
                     {
-                        int product = input1 * input2;
-                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, product);
+                        int product = input_1 * input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input_1, input2, product);
                     }
                 }
                 else if (operatorNow == Division)
@@ -134,13 +131,29 @@ namespace BasicCalculator
 
                     if (equalNow == Equal)
                     {
-                        int quotient = input1 / input2;
-                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input1, input2, quotient);
+                        int quotient = input_1 / input2;
+                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input_1, input2, quotient);
                     }
                 }
             } //--Else EXIT the program
             else if (yesNO == "No" || yesNO == "NO" || yesNO == "no")
             {return;}
         }
+
+        //--VALIDATION NUMBERS Method
+        static int ValidateNumbersInput(string i)
+        {
+            int input;
+
+            //--NUMBER ---- VALIDATION I---//
+            while (!(int.TryParse(i, out input)))
+            {
+                Console.WriteLine("Please only enter numbers!");
+                i = Console.ReadLine();
+            }
+            return input;
+        }
+
+       // int valid = ValidateNumbersInput();
     }
 }
