@@ -51,14 +51,21 @@ namespace BasicCalculator
                 //--User enters first number input
                 Console.Write("Press a number and press enter: ");
                 string inputOne = Console.ReadLine();
-                
+
                 //--Validate user number input
                 int input_1 = ValidateNumbersInput(inputOne);
-                
-                
+
+
                 //--Arithmetic Operator selection prompt
                 Console.Write("Press an operator and press enter: ");
                 string operatorNow = Console.ReadLine();
+
+                //--Validate Operator--//
+                while (operatorNow != "+" && operatorNow != "-" && operatorNow != "*" && operatorNow != "/")
+                {
+                    Console.WriteLine("Please enter one of the following Arithmetic Operators and press enter: +, -, *, or /");
+                    operatorNow = Console.ReadLine();
+                }
 
                 //--Addition key pressed--//
                 if (operatorNow == Addition)
@@ -87,7 +94,7 @@ namespace BasicCalculator
                     //--New number entered
                     Console.Write("Press another number and press enter: ");
                     string inputTwo = Console.ReadLine();
-                    input2 = Convert.ToInt32(inputTwo);
+                    input2 = ValidateNumbersInput(inputTwo);
 
                     //--Equal key pressed
                     Console.Write("Press equal key and press enter: ");
@@ -104,7 +111,7 @@ namespace BasicCalculator
                     //--New number entered
                     Console.Write("Press another number and press enter: ");
                     string inputTwo = Console.ReadLine();
-                    input2 = Convert.ToInt32(inputTwo);
+                    input2 = ValidateNumbersInput(inputTwo);
 
                     //--Equal key pressed
                     //--Get sum of user's two numbers
@@ -122,7 +129,7 @@ namespace BasicCalculator
                     //--New number entered
                     Console.Write("Press another number and press enter: ");
                     string inputTwo = Console.ReadLine();
-                    input2 = Convert.ToInt32(inputTwo);
+                    input2 = ValidateNumbersInput(inputTwo);
 
                     //--Equal key pressed
                     //--Get sum of user's two numbers
@@ -140,6 +147,7 @@ namespace BasicCalculator
             {return;}
         }
 
+        //-----------------------------------------//
         //--VALIDATION NUMBERS Method
         static int ValidateNumbersInput(string i)
         {
@@ -153,7 +161,5 @@ namespace BasicCalculator
             }
             return input;
         }
-
-       // int valid = ValidateNumbersInput();
     }
 }
