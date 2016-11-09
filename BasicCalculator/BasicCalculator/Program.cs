@@ -32,7 +32,7 @@ namespace BasicCalculator
             int input2;
 
             //--Ask user for name and store it in variable
-            Console.WriteLine("Enter name: ");
+            Console.WriteLine("Enter name: "); 
             string name = Console.ReadLine();
 
             //--Welcome user, debrief user, and store user's input
@@ -41,7 +41,7 @@ namespace BasicCalculator
             string yesNO = Console.ReadLine();
 
             //--Validate user's input for yes or no
-            while (yesNO != "Yes" && yesNO != "YES" && yesNO != "yes" && yesNO == "No" && yesNO == "NO" && yesNO == "no")
+            while (yesNO != "Yes" && yesNO != "YES" && yesNO != "yes" && yesNO != "No" && yesNO != "NO" && yesNO != "no")
             {Console.WriteLine("Please type Yes or No and press enter."); yesNO = Console.ReadLine();}
 
             //----------YES ---or--- NO----------//
@@ -61,7 +61,7 @@ namespace BasicCalculator
                 string operatorNow = Console.ReadLine();
 
                 //--Validate Operator--//
-                while (operatorNow != "+" && operatorNow != "-" && operatorNow != "*" && operatorNow != "/")
+                while (operatorNow != "+" && operatorNow != "-" && operatorNow != "*" &&   operatorNow != "/")
                 {
                     Console.WriteLine("Please enter one of the following Arithmetic Operators and press enter: +, -, *, or /");
                     operatorNow = Console.ReadLine();
@@ -103,7 +103,7 @@ namespace BasicCalculator
                     if (equalNow == Equal)
                     {
                         int difference = input_1 - input2;
-                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input_1, input2, difference);
+                        Console.WriteLine("You entered {0} and {1} for a difference of {2}", input_1, input2, difference);
                     }
                 }
                 else if (operatorNow == Multiplication)
@@ -121,7 +121,7 @@ namespace BasicCalculator
                     if (equalNow == Equal)
                     {
                         int product = input_1 * input2;
-                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input_1, input2, product);
+                        Console.WriteLine("You entered {0} and {1} for a product of {2}", input_1, input2, product);
                     }
                 }
                 else if (operatorNow == Division)
@@ -139,7 +139,7 @@ namespace BasicCalculator
                     if (equalNow == Equal)
                     {
                         int quotient = input_1 / input2;
-                        Console.WriteLine("You entered {0} and {1} for a sum of {2}", input_1, input2, quotient);
+                        Console.WriteLine("You entered {0} and {1} for a quotient of {2}", input_1, input2, quotient);
                     }
                 }
             } //--Else EXIT the program
