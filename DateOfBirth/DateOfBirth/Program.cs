@@ -37,10 +37,26 @@ namespace DateOfBirth
             //--if user enters 'Yes' begin the program
             if (toBeOrNotToBe == "YES" || toBeOrNotToBe == "Yes" || toBeOrNotToBe == "yes")
             {
-                //--------------Program Begins Here-----------------//
-                Console.Write("Hi {0}! Let's get started. Enter your DOB and press enter ");
-                string dob = Console.ReadLine();
+                DateTime miniteNow = new DateTime();
+                DateTime hourNow = new DateTime();
+                DateTime dayNow = new DateTime();
+                DateTime monthNow = new DateTime();
+                DateTime yearNow = new DateTime();
 
+                
+                dayNow = DateTime.Today;
+                monthNow = DateTime.DaysInMonth(int 2016, int 11);
+                
+
+                /*
+                //--------------Program Begins Here-----------------//
+                Console.Write("Hi {0}! Let's get started. Enter your birth year and press enter ", name);
+                string birthYear = Console.ReadLine();
+                
+                Console.Write("Now your birth day: ");
+                string birthDay = Console.ReadLine();
+                */
+                Console.WriteLine("TEST this {0}", dayNow.Month);
 
                 //--------------Program Completed-----------------//
 
@@ -69,16 +85,20 @@ namespace DateOfBirth
             //----Filtering the time of day and greeting user accordingly-----//
             if (timeOfDay.Hour >= 0 && timeOfDay.Hour < 12)
             {
-                Console.WriteLine("Hi! And good morning {0}. Welcome to our Date of Birth Program!", me);
+                //--MORNING
+                Console.WriteLine("Good Morning {0}! Welcome to our Date of Birth Program!", me);
             }else if (timeOfDay.Hour >= 12 && timeOfDay.Hour < 16)
             {
-                Console.WriteLine("Well, good afternoon {0}. Welcome to our Date of Birth Program!", me);
+                //--AFTERNOON
+                Console.WriteLine("Good Afternoon {0}! Welcome to our Date of Birth Program!", me);
             }else if (timeOfDay.Hour >= 16 && timeOfDay.Hour < 18)
             {
-                Console.WriteLine("Hello {0} and good evening! Welcome to our Date of Birth Program!", me);
+                //--EVENING
+                Console.WriteLine("Good Evening {0}! Welcome to our Date of Birth Program!", me);
             }else if (timeOfDay.Hour >= 18)
             {
-                Console.WriteLine("Greetings {0}! And good night. Welcome to our Date of Birth Program!", me);
+                //--NIGHT
+                Console.WriteLine("Good Night {0}! Welcome to our Date of Birth Program!", me);
             }return me;
         }
     }
