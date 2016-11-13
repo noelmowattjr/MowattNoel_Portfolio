@@ -25,25 +25,27 @@ namespace DateOfBirth
             string greetByName = Greetings(name);
 
             //--Debrief user
-            Console.Write("Today we are going to find out how old you are in hours and minutes!\r\nType Yes to find out or No to exit! Ready? ");
+            Console.Write("Today we are going to find out how old you are in hours and minutes!\r\nType Yes to find out or No to exit! Ready {0}? ", name);
             string toBeOrNotToBe = Console.ReadLine();
 
             //--VALIDATION: Yes OR No--//
             while (toBeOrNotToBe != "YES" && toBeOrNotToBe != "Yes" && toBeOrNotToBe != "yes" && toBeOrNotToBe != "NO" && toBeOrNotToBe != "No" && toBeOrNotToBe != "no")
             {
-                Console.Write("Please enter Yes OR No to continue: ");
-                toBeOrNotToBe = Console.ReadLine();
+                Console.Write("Please enter Yes OR No to continue: "); toBeOrNotToBe = Console.ReadLine();
             }
 
             //--if user enters 'Yes' begin the program
             if (toBeOrNotToBe == "YES" || toBeOrNotToBe == "Yes" || toBeOrNotToBe == "yes")
             {
                 //--------------Program Begins Here-----------------//
-                Console.WriteLine("Hi and welcome!");
+                Console.Write("Hi {0}! Let's get started. Enter your DOB and press enter ");
+                string dob = Console.ReadLine();
 
 
-            } 
-            
+                //--------------Program Completed-----------------//
+
+            }
+
             //--if user enters 'No' then End the program
             else if (toBeOrNotToBe == "NO" || toBeOrNotToBe == "No" || toBeOrNotToBe == "no")
             {
