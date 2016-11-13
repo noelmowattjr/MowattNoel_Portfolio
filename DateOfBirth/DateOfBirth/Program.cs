@@ -15,9 +15,35 @@ namespace DateOfBirth
                 App: Date of Birth*/
 
             /*  INSTRUCTIONS: user inputs DOB and the program outputs how old user is
-                in terms of hours and minutes */
+                in the form of hours and minutes */
 
-            
+            //--Time Object created--//
+            //--Depending on time of day - user will be greeted by good morning, goodafternoon or goodnight//
+            DateTime timeOfDay = new DateTime();
+
+            //--Instantiated my time variable to ouput real time
+            timeOfDay = DateTime.Now;
+
+            //--Prompt user for name
+            Console.Write("Hello and what is your name?");
+            string name = Console.ReadLine();
+
+            //----Filtering the time of day and greeting user accordingly-----//
+            if (timeOfDay.Hour >= 0 && timeOfDay.Hour < 12)
+            {
+                Console.WriteLine("Hi! And good morning {0}. Welcome to our Date of Birth Program!", name);
+            } else if (timeOfDay.Hour >= 12 && timeOfDay.Hour < 16)
+            {
+                Console.WriteLine("Well, good afternoon {0}. Welcome to our Date of Birth Program!", name);
+            } else if (timeOfDay.Hour >= 16 && timeOfDay.Hour < 18)
+            {
+                Console.WriteLine("Hello {0} and good evening! Welcome to our Date of Birth Program!", name);
+            } else if (timeOfDay.Hour >= 18)
+            {
+                Console.WriteLine("Greetings {0}! And good night. Welcome to our Date of Birth Program!", name);
+            }
+
+
         }
     }
 }
