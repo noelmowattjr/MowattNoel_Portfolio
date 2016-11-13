@@ -37,26 +37,45 @@ namespace DateOfBirth
             //--if user enters 'Yes' begin the program
             if (toBeOrNotToBe == "YES" || toBeOrNotToBe == "Yes" || toBeOrNotToBe == "yes")
             {
-                DateTime miniteNow = new DateTime();
-                DateTime hourNow = new DateTime();
-                DateTime dayNow = new DateTime();
-                DateTime monthNow = new DateTime();
-                DateTime yearNow = new DateTime();
+                //--Int holders for user inputs
+                int birthY; int birthM; int birthD;
 
-                
-                dayNow = DateTime.Today;
-                monthNow = DateTime.DaysInMonth(int 2016, int 11);
-                
-
-                /*
                 //--------------Program Begins Here-----------------//
                 Console.Write("Hi {0}! Let's get started. Enter your birth year and press enter ", name);
-                string birthYear = Console.ReadLine();
+                string bYear = Console.ReadLine();
+
+                //--Validate Year
+                while (!(int.TryParse(bYear, out birthY)))
+                {
+                    Console.Write("Please enter the year you were born and press enter: ");
+                    bYear = Console.ReadLine();
+                }
                 
                 Console.Write("Now your birth day: ");
-                string birthDay = Console.ReadLine();
-                */
-                Console.WriteLine("TEST this {0}", dayNow.Month);
+                string bMonth = Console.ReadLine();
+
+                //--Validate Year
+                while (!(int.TryParse(bMonth, out birthM)))
+                {
+                    Console.Write("Please enter the month you were born and press enter: ");
+                    bMonth = Console.ReadLine();
+                }
+
+                Console.WriteLine("And finally, what is your birth day: ");
+                string bDay = Console.ReadLine();
+
+                //--Validate Year
+                while (!(int.TryParse(bDay, out birthD)))
+                {
+                    Console.Write("Please enter the day you were born and press enter: ");
+                    bDay = Console.ReadLine();
+                }
+
+                //--birthdate
+                DateTime myBirthDate = new DateTime(birthY, birthM, birthD);
+                Console.WriteLine("Testing birthdate {0}", myBirthDate);
+                
+                
 
                 //--------------Program Completed-----------------//
 
