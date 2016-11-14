@@ -14,7 +14,7 @@ namespace MinMaxMethod
             Console.Write("Enter a series of numbers separated by commas: ");
             string input = Console.ReadLine();
 
-            var resultz = findMinAndMax(new int[] { 100, 22, 50, 32, 19, 90 });
+            var resultz = findMinAndMax(new int[] { 20,30,900,800,1,0,909100 });
 
             //--Print min and max to console
             Console.WriteLine("Results: {0}", resultz);
