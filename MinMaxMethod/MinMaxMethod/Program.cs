@@ -10,11 +10,14 @@ namespace MinMaxMethod
     {
         static void Main(string[] args)
         {
-            //--Method returns a tuple of the minimal and maximum value of array
-            findMinAndMax(new int[] {1,2,3,4,5 });
+            //--Ask user to enter a series of numbers separated by comma
+            Console.Write("Enter a series of numbers separated by commas: ");
+            string input = Console.ReadLine();
+
+            var resultz = findMinAndMax(new int[] { 100, 22, 50, 32, 19, 90 });
 
             //--Print min and max to console
-            Console.WriteLine("Results: "+ findMinAndMax(new int[] { 55,20,100,99,29,88 }));
+            Console.WriteLine("Results: {0}", resultz);
         }
 
         /*  A method for finding the min and max of an array of numbers */
