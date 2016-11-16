@@ -16,7 +16,7 @@ namespace DateOfBirth
 
             /*  INSTRUCTIONS: user inputs DOB and the program outputs how old user is
                 in the form of hours and minutes */
-
+ 
                 
             //--Prompt user for name
             Console.Write("Hello and what is your name? ");
@@ -26,13 +26,13 @@ namespace DateOfBirth
             string greetByName = Greetings(name);
 
             //--Debrief user
-            Console.Write("Today we are going to find out how old you are in hours and minutes!\r\nType Yes to find out or No to exit! Ready {0}? ", name);
+            Console.Write("Today we are going to find out how old you are in hours and minutes!\r\nType Yes to find out or No to exit! (YES/NO)? ");
             string toBeOrNotToBe = Console.ReadLine();
 
             //--VALIDATION: Yes OR No--//
             while (toBeOrNotToBe != "YES" && toBeOrNotToBe != "Yes" && toBeOrNotToBe != "yes" && toBeOrNotToBe != "NO" && toBeOrNotToBe != "No" && toBeOrNotToBe != "no")
             {
-                Console.Write("Please enter Yes OR No to continue: "); toBeOrNotToBe = Console.ReadLine();
+                Console.Write("(YES/NO) to continue: "); toBeOrNotToBe = Console.ReadLine();
             }
 
             //--if user enters 'Yes' begin the program
@@ -40,50 +40,90 @@ namespace DateOfBirth
             {
                 //--Int holders for user inputs
                 int birthY; int birthM; int birthD;
-
+                int yearNow; int monthNow; int dayNow;
                 //--------------------------------Program Begins Here---------------------------------------//
+                
+                //--MARK I
 
+                //--User prompted for current year
+                Console.Write("Type the current year: ");
+                string currYear = Console.ReadLine();
+                while (!(int.TryParse(currYear, out yearNow)))
+                {
+                    Console.Write("ERROR! Please enter your birth date: ");
+                    currYear = Console.ReadLine();
+                }
+
+                //--User prompted for current month
+                Console.Write("Type the current month: ");
+                string currMonth = Console.ReadLine();
+                while (!(int.TryParse(currMonth, out monthNow)))
+                {
+                    Console.Write("ERROR! Please enter your birth date: ");
+                    currMonth = Console.ReadLine();
+                }
+
+                //--User prompted for current day
+                Console.Write("Type today's day: ");
+                string currDay = Console.ReadLine();
+                while (!(int.TryParse(currDay, out dayNow)))
+                {
+                    Console.Write("ERROR! Please enter your birth date: ");
+                    currDay = Console.ReadLine();
+                }
+
+
+                //--MARK II
                 //--Prompt & catch year
-                Console.Write("Hi {0}! Let's get started.\r\nEnter your birth year and press enter ", name);
+                Console.Write("Now type your year of birth: ");
                 string bYear = Console.ReadLine();
 
                 //--Validate Year
                 while (!(int.TryParse(bYear, out birthY)))
                 {
-                    Console.Write("Please enter the year you were born and press enter: ");
+                    Console.Write("ERROR! Please enter your birth year: ");
                     bYear = Console.ReadLine();
                 }
                 
                 //--Prompt & catch month
-                Console.Write("Now your birth month: ");
+                Console.Write("Month of birth? ");
                 string bMonth = Console.ReadLine();
 
                 //--Validate Year
                 while (!(int.TryParse(bMonth, out birthM)))
                 {
-                    Console.Write("Please enter the month you were born and press enter: ");
+                    Console.Write("ERROR! Please enter your birth month: ");
                     bMonth = Console.ReadLine();
                 }
 
                 //--Prompt & catch day
-                Console.Write("And finally, what is your birth day: ");
+                Console.Write("Day of birth? ");
                 string bDay = Console.ReadLine();
 
                 //--Validate Year
                 while (!(int.TryParse(bDay, out birthD)))
                 {
-                    Console.Write("Please enter the day you were born and press enter: ");
+                    Console.Write("ERROR! Please enter your birth date: ");
                     bDay = Console.ReadLine();
                 }
 
-                //--Today's date
-                DateTime todaysDate = new DateTime(2016, 11, 15);
+                //--User provides today's date
+                DateTime todaysDate = new DateTime(yearNow, monthNow, dayNow);
 
-                //--birthdate
+                //--User provides his/her birthdate
                 DateTime myBirthDate = new DateTime(birthY, birthM, birthD);
 
-                 var age = todaysDate.Year - myBirthDate.Year;
-                Console.WriteLine("YOU ARE {0} Mothfucker! ", age);
+                //---CALCULATIONS
+                var age = todaysDate.Year - myBirthDate.Year; //--Age in years
+                var ageInMonths = age * 12; //--age in months
+                var ageInWeeks = age * 52;//--age in weeks
+                var ageInDays = age * 365;//--age in days
+                var ageInHours = age * 8760;//--age in hours
+                var ageInMinutes = age * 525600;//--age in minutes
+
+                //--Show user how old he/she is
+                Console.WriteLine("\r\nBased on the information you gave me, you are {0} years old!\r\nNow to convert that into hours and minutes you are {1} hours old OR {2}minutes old!",age, ageInHours,ageInMinutes);
+                
 
                 //--------------Program Completed-----------------//
 
@@ -130,3 +170,4 @@ namespace DateOfBirth
         }
     }
 }
+
