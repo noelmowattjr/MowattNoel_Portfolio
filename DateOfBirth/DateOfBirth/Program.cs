@@ -40,8 +40,10 @@ namespace DateOfBirth
                 //--Int holders for user inputs
                 int birthY; int birthM; int birthD;
 
-                //--------------Program Begins Here-----------------//
-                Console.Write("Hi {0}! Let's get started. Enter your birth year and press enter ", name);
+                //--------------------------------Program Begins Here---------------------------------------//
+
+                //--Prompt & catch year
+                Console.Write("Hi {0}! Let's get started.\r\nEnter your birth year and press enter ", name);
                 string bYear = Console.ReadLine();
 
                 //--Validate Year
@@ -51,7 +53,8 @@ namespace DateOfBirth
                     bYear = Console.ReadLine();
                 }
                 
-                Console.Write("Now your birth day: ");
+                //--Prompt & catch month
+                Console.Write("Now your birth month: ");
                 string bMonth = Console.ReadLine();
 
                 //--Validate Year
@@ -61,7 +64,8 @@ namespace DateOfBirth
                     bMonth = Console.ReadLine();
                 }
 
-                Console.WriteLine("And finally, what is your birth day: ");
+                //--Prompt & catch day
+                Console.Write("And finally, what is your birth day: ");
                 string bDay = Console.ReadLine();
 
                 //--Validate Year
@@ -71,11 +75,14 @@ namespace DateOfBirth
                     bDay = Console.ReadLine();
                 }
 
+                //--Today's date
+                DateTime todaysDate = new DateTime(2016, 11, 15);
+
                 //--birthdate
                 DateTime myBirthDate = new DateTime(birthY, birthM, birthD);
-                Console.WriteLine("Testing birthdate {0}", myBirthDate);
-                
-                
+
+                 var age = todaysDate.Year - myBirthDate.Year;
+                Console.WriteLine("YOU ARE {0} Mothfucker!", age);
 
                 //--------------Program Completed-----------------//
 
