@@ -16,6 +16,7 @@ namespace DateOfBirth
 
             /*  INSTRUCTIONS: user inputs DOB and the program outputs how old user is
                 in the form of hours and minutes */
+
                 
             //--Prompt user for name
             Console.Write("Hello and what is your name? ");
@@ -82,7 +83,7 @@ namespace DateOfBirth
                 DateTime myBirthDate = new DateTime(birthY, birthM, birthD);
 
                  var age = todaysDate.Year - myBirthDate.Year;
-                Console.WriteLine("YOU ARE {0} Mothfucker!", age);
+                Console.WriteLine("YOU ARE {0} Mothfucker! ", age);
 
                 //--------------Program Completed-----------------//
 
