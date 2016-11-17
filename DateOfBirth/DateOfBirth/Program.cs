@@ -26,7 +26,7 @@ namespace DateOfBirth
             string greetByName = Greetings(name);
 
             //--Debrief user
-            Console.Write("Today we are going to find out how old you are in hours and minutes!\r\nType Yes to find out or No to exit! (YES/NO)? ");
+            Console.Write("\r\nToday we are going to find out how old you are in years, hours or minutes!\r\nType Yes to find out or No to exit! (YES/NO)? ");
             string toBeOrNotToBe = Console.ReadLine();
 
             //--VALIDATION: Yes OR No--//
@@ -50,7 +50,7 @@ namespace DateOfBirth
                 string currYear = Console.ReadLine();
                 while (!(int.TryParse(currYear, out yearNow)))
                 {
-                    Console.Write("ERROR! Please enter your birth date: ");
+                    Console.Write("ERROR! Please enter your current year: ");
                     currYear = Console.ReadLine();
                 }
 
@@ -59,7 +59,7 @@ namespace DateOfBirth
                 string currMonth = Console.ReadLine();
                 while (!(int.TryParse(currMonth, out monthNow)))
                 {
-                    Console.Write("ERROR! Please enter your birth date: ");
+                    Console.Write("ERROR! Please enter current month: ");
                     currMonth = Console.ReadLine();
                 }
 
@@ -68,7 +68,7 @@ namespace DateOfBirth
                 string currDay = Console.ReadLine();
                 while (!(int.TryParse(currDay, out dayNow)))
                 {
-                    Console.Write("ERROR! Please enter your birth date: ");
+                    Console.Write("ERROR! Please enter today's day: ");
                     currDay = Console.ReadLine();
                 }
 
@@ -86,7 +86,7 @@ namespace DateOfBirth
                 }
                 
                 //--Prompt & catch month
-                Console.Write("Month of birth? ");
+                Console.Write("Month of birth: ");
                 string bMonth = Console.ReadLine();
 
                 //--Validate Year
@@ -97,7 +97,7 @@ namespace DateOfBirth
                 }
 
                 //--Prompt & catch day
-                Console.Write("Day of birth? ");
+                Console.Write("Day of birth: ");
                 string bDay = Console.ReadLine();
 
                 //--Validate Year
@@ -121,8 +121,31 @@ namespace DateOfBirth
                 var ageInHours = age * 8760;//--age in hours
                 var ageInMinutes = age * 525600;//--age in minutes
 
+                //--Ask User if they would like their age in years, hours, or minutes
+                Console.WriteLine("Would you like to see your age in Years? Hours? Or Minutes?");
+                Console.Write("(Years/Hours/Minutes): ");
+                string yearsHoursMinutes = Console.ReadLine();
+
+                //--validating that user only enters years, hours, or minutes
+                while (yearsHoursMinutes != "years" && yearsHoursMinutes != "hours" && yearsHoursMinutes != "minutes")
+                {
+                    Console.Write("ERROR! (Years/Hours/Minutes)? ");
+                }
+
+                //--Displaying user's age according to what he chooses
+                if (yearsHoursMinutes.ToLower() == "years" )
+                {
+                    Console.WriteLine("You are {0} years old", age);
+                } else if (yearsHoursMinutes.ToUpper() == "hours" || yearsHoursMinutes.ToLower() == "hours")
+                {
+                    Console.WriteLine("You are {0} hours old", ageInHours);
+                } else if (yearsHoursMinutes.ToUpper() == "minutes" || yearsHoursMinutes.ToLower() == "minutes")
+                {
+                    Console.WriteLine("You are {0} minutes old", ageInMinutes);
+                }
+
                 //--Show user how old he/she is
-                Console.WriteLine("\r\nBased on the information you gave me, you are {0} years old!\r\nNow to convert that into hours and minutes you are {1} hours old OR {2}minutes old!",age, ageInHours,ageInMinutes);
+                //--Console.WriteLine("\r\nBased on the information you gave me, you are {0} years old!\r\nNow to convert that into hours and minutes you are {1} hours old OR  {2}minutes old!",age, ageInHours,ageInMinutes);
                 
 
                 //--------------Program Completed-----------------//
