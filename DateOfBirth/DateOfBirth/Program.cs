@@ -130,18 +130,19 @@ namespace DateOfBirth
                 while (yearsHoursMinutes != "years" && yearsHoursMinutes != "hours" && yearsHoursMinutes != "minutes")
                 {
                     Console.Write("ERROR! (Years/Hours/Minutes)? ");
+                    yearsHoursMinutes = Console.ReadLine();
                 }
 
                 //--Displaying user's age according to what he chooses
                 if (yearsHoursMinutes.ToLower() == "years" )
                 {
-                    Console.WriteLine("You are {0} years old", age);
+                    Console.WriteLine("{0}! You are {1} years old",name, age);
                 } else if (yearsHoursMinutes.ToUpper() == "hours" || yearsHoursMinutes.ToLower() == "hours")
                 {
-                    Console.WriteLine("You are {0} hours old", ageInHours);
+                    Console.WriteLine("{0}! You are {1} hours old",name, ageInHours);
                 } else if (yearsHoursMinutes.ToUpper() == "minutes" || yearsHoursMinutes.ToLower() == "minutes")
                 {
-                    Console.WriteLine("You are {0} minutes old", ageInMinutes);
+                    Console.WriteLine("{0}! You are {1} minutes old",name, ageInMinutes);
                 }
 
                 //--Show user how old he/she is
